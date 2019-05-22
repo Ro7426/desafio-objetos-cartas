@@ -10,9 +10,9 @@ end
         puts 'Escriba salir (terminar juego)'
 def menu
 	    puts '---------------------'
-	    puts '1.- jugar'
-	    puts '2.- mostrar'
-	    puts '3.- salir'
+	    puts '1) jugar'
+	    puts '2) mostrar'
+	    puts '3) salir'
 	    puts '----------------------'
 end
     menu
@@ -31,7 +31,7 @@ while opcion = gets.chomp
 		
 	when 'mostrar'
 		if arreglo_cartas.nil?
-			puts 'Debe jugar antes de ver sus cartas'
+			puts 'Escriba jugar y luego mostrar '
 		else
 			arreglo_cartas.each do |carta|
 				puts "#{carta.numero} #{carta.pinta}"

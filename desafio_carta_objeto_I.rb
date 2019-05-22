@@ -2,23 +2,24 @@ class Carta
 	attr_reader :pinta, :numero
 	def initialize(pinta,numero)
 		@pinta = pinta
-		@numero = numero
+        @numero = numero
+        
 	end
 
 end
 
-puts 'Escriba jugar para comenzar el juego'
-puts 'Escriba mostrar  (mostrar 5 cartas)'
-puts 'Escriba salir (terminar juego)'
+        puts 'Escriba jugar para comenzar el juego'
+        puts 'Escriba mostrar  (mostrar 5 cartas)'
+        puts 'Escriba salir (terminar juego)'
 
 
 
 def menu
-	puts ''
-	puts '1.- jugar'
-	puts '2.- mostrar'
-	puts '3.- salir'
-	puts ''
+	    puts ''
+	    puts '1.- jugar'
+	    puts '2.- mostrar'
+	    puts '3.- salir'
+	    puts ''
 end
 
 menu
@@ -32,7 +33,7 @@ while opcion = gets.chomp
 
 		5.times do 
 			arreglo_cartas.push(Carta.new(pintas.sample,numeros.sample))
-		end
+		    end
 
 		menu
 		
@@ -42,8 +43,8 @@ while opcion = gets.chomp
 		else
 			arreglo_cartas.each do |carta|
 				puts "#{carta.numero} #{carta.pinta}"
-			end
 		end
+	end
 
 		menu
 
@@ -51,7 +52,10 @@ while opcion = gets.chomp
 		puts 'juego terminado'
 		break
 	else
-		puts 'Ingresar opcion valida'
-		menu
+        puts 'Ingresar opcion valida'
+        
+        menu
+        
+
 	end
 end
